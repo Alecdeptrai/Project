@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <style>
+        .boxed {
+            width: 200px;
+            height: 200px;
+            position: relative;
+            background-clip: padding-box;
+            border: 10px solid transparent;
+            background-color: #191a28;
+            border-radius: 20px;
+        }
+
+        .boxed:before {
+            content: "";
+            position: absolute;
+            inset: 0;
+            z-index: -1;
+            margin: -10px;
+            background-image: linear-gradient(to right top, #2979ff, #07a787);
+            border-radius: inherit;
+        }
+    </style>
+</head>
+
+<body>
+    <button data-aos="fade-up" class="boxed">
+        <div class="boxed-child"></div>
+    </button>
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>
+        AOS.init();
+    </script>
+</body>
+
+</html>
